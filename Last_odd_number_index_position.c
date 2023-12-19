@@ -1,13 +1,15 @@
 #include<stdio.h>
 int main ()
 {
-    int i,n,g,ar[100],c=0;
+    int n,i;
     scanf("%d",&n);
+    int ar[n];
     for(i=0;i<n;i++)
     {
-     scanf("%d",&ar[i]);
-     if(i%2==0)
-     c+=ar[i];
-    }
-     printf("%d",c);
+        scanf("%d",&ar[i]);
+    }for(i=n-1;i>=0;i--)
+    {
+            if(ar[i]%2==1)
+            break;
+    }printf("%d",i);
 }
